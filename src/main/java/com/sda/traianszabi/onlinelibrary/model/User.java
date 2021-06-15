@@ -8,8 +8,15 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "login")
+    private String login;
+    @Column(name = "password")
+    private String password;
+
+
     @Column(name = "phone")
     private String phone;
     @Column(name = "email")
@@ -19,12 +26,12 @@ public class User {
     @JoinColumn(name = "account_id")
     private LibraryAccount libraryAccount;
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long userId) {
+        this.id = userId;
     }
 
     public String getPhone() {
@@ -51,10 +58,27 @@ public class User {
         this.libraryAccount = libraryAccount;
     }
 
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + userId +
+                "id=" + id +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 '}';

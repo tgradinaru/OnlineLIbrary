@@ -9,8 +9,8 @@ public class LibraryAccount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "account_id")
-    private Long accountId;
+    @Column(name = "id")
+    private Long id;
     @Column(name = "is_closed")
     private Boolean isClosed;
     @Column(name = "creation_date")
@@ -21,19 +21,19 @@ public class LibraryAccount {
     @Override
     public String toString() {
         return "LibraryAccount{" +
-                "accountId=" + accountId +
+                "accountId=" + id +
                 ", isClosed=" + isClosed +
                 ", creationDate=" + creationDate +
                 ", closedDate=" + closedDate +
                 '}';
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public Long getId() {
+        return id;
     }
 
-    public void setAccountId(Long id) {
-        this.accountId = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Boolean getClosed() {

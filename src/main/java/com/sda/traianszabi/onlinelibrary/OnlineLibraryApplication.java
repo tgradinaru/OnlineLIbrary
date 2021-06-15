@@ -47,10 +47,10 @@ public class OnlineLibraryApplication implements CommandLineRunner {
         context.refresh();
 
         LibraryAccount libraryAccount1 = new LibraryAccount();
-        libraryAccount1.setAccountId(1L);
+        libraryAccount1.setId(1L);
 
         User user1 = new User();
-        user1.setUserId(1L);
+        user1.setId(1L);
 
         Book book1 = new Book();
         book1.setIsbn(1L);
